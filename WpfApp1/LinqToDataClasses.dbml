@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Librarysql" Class="LinqToDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-5HMCSQD\BEEKSSQL;Initial Catalog=Librarysql;Integrated Security=True" SettingsObjectName="WpfApp1.Properties.Settings" SettingsPropertyName="LibrarysqlConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Librarysqltable" Member="Librarysqltables">
+    <Type Name="Librarysqltable">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Location" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

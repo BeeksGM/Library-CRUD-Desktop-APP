@@ -1,0 +1,38 @@
+﻿<Page x:Class="WpfApp1.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="AdminPage">
+
+    <Grid Background="White">
+        <Label Content="Tape Database:" FontSize="50" FontFamily="Garamond" Margin="1000,0,572,958"/>
+        <Grid Background="Gray" Margin="10,137,1000,256">
+            <Label HorizontalAlignment="Center" FontWeight="Bold" Name="Properties" Content="Properties" FontSize="50" ></Label>
+            <ScrollViewer x:Name="scrollview" Margin="0,0,-17,0">
+                <StackPanel Background="LightGray" Margin="10,152,730,201">
+                    <Label HorizontalAlignment="Right" Padding="23" Content="ID:" FontSize="25" />
+                    <Label HorizontalAlignment="Right" Padding="23" Content="Date:" FontSize="25" />
+                    <Label HorizontalAlignment="Right" Padding="23" Content="Title:" FontSize="25" />
+                    <Label HorizontalAlignment="Right" Padding="23" Content="Location:" FontSize="25" />
+                </StackPanel>
+            </ScrollViewer>
+            <TextBox FontSize="20" Name ="IDtxt"  BorderBrush="Black" Margin="180,152,357,451" />
+            <TextBox FontSize="20" x:Name ="Datetxt"  BorderBrush="Black" Margin="180,236,357,369" />
+            <TextBox FontSize="20" Name ="Titletxt"  BorderBrush="Black" Margin="180,318,357,283" />
+            <TextBox FontSize="20" x:Name ="Locationtxt"  BorderBrush="Black" Margin="180,404,357,201" />
+
+            <Button FontSize="20" FontWeight="Bold" Click="Add_Click" Content="Add" x:Name="Add" Margin="10,486,730,124" />
+            <Button FontSize="20" FontWeight="Bold" Click="Edit_Click" Content="Edit" x:Name="Edit" Margin="180,486,528,124" />
+            <Button FontSize="20" FontWeight="Bold" Click="Remove_Click" Content="Remove" x:Name="Remove" Margin="382,486,357,124" />
+
+        </Grid>
+        <DataGrid SelectionMode="Single" SelectionUnit="FullRow" SelectionChanged="MainDataGrid_SelectionChanged" BorderBrush="Black" BorderThickness="3" Background="LightGray" Name="MainDataGrid" Margin="1000,137,10,10"></DataGrid>
+        <Button Name="Searchbtn" Click="Searchbtn_Click" BorderBrush="Black" BorderThickness="2" FontSize="15" Content="Search" Margin="1000,68,748,943"></Button>
+        <TextBox Name="searchbartextbox" BorderBrush="Black" BorderThickness="2" Margin="1177,68,0,943" HorizontalAlignment="Left" Width="711"></TextBox>
+    </Grid>
+
+</Page>
